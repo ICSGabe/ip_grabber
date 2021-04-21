@@ -24,14 +24,11 @@ def remove_dup(a):
 #file_name is text file that is being parsed for ip addresses
 file_name = input("Enter the exact log file name (include the file extension): ")
 
-
 #This is an empty list that later contain all of the discovered IP addresses. It is used to remove the initial duplicated IPs. 
 no_duplicate = []
 
-#Pattern for IP address pattern
-#ip_pattern = re.compile(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
+#Regex pattern for IP address pattern
 ip_pattern = re.compile(r"(?P<ipv4>(?<![0-9])(?:(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2}))(?![0-9]))")
-ip_pattern_next = re.compile(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\n")
 
 with open(file_name, 'r') as f:
     lines = f.readlines()
