@@ -22,8 +22,6 @@ def remove_dup(a):
       i += 1
 
 #file_name is text file that is being parsed for ip addresses
-#file_name = 'ips_yup.txt'
-#file_name = "2020-12-03-traffic-analysis-quiz-alerts.txt"
 file_name = input("Enter the exact log file name (include the file extension): ")
 
 
@@ -43,7 +41,6 @@ with open(file_name, 'r') as f:
         match = re.search(ip_pattern, line)
         if match:
          # Make sure to add \n to display correctly when we write it back
-         #new_line = match.group() + '\n'
             new_line = match.group()
         #new_file.append(new_line)
             no_duplicate.append(new_line)
