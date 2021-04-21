@@ -1,7 +1,7 @@
 import re
 
 '''
-This program opens a file, reads each line within a file, 
+This program opens a file, reads each line, 
 matches the regular expression pattern of an IP address, 
 and outputs the result to the command line.
 
